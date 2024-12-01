@@ -1,5 +1,3 @@
-############################################################################################################################################################
-
 # Set the Discord webhook URL
 $dc = "https://discord.com/api/webhooks/1312719703080177757/6_n-f2jRWn4FPwEXxyAajPo8WXlMfvbSwzsgZ856oygu-l54BbXANRi40_xJ93rZKJsa"
 
